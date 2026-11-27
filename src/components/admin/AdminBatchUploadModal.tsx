@@ -23,6 +23,7 @@ import {
   isR2Ready,
   uploadAssetsToR2,
 } from '../../utils/r2-upload';
+import { uploadAssetsViaWorkerR2 } from '../../utils/cloudflare-admin';
 
 interface BatchQueueItem {
   localId: string;
@@ -43,6 +44,8 @@ interface AdminBatchUploadModalProps {
   categories: AdminCategoryItem[];
   existingSlugs: Set<string>;
   r2Settings: R2ConnectionSettings;
+  workerR2Connected?: boolean;
+  adminToken?: string | null;
   onOpenR2Settings: () => void;
   onClose: () => void;
   onBatchComplete: (sheets: AdminCatalogSheet[]) => void;
@@ -68,6 +71,8 @@ export const AdminBatchUploadModal: React.FC<AdminBatchUploadModalProps> = ({
   categories,
   existingSlugs,
   r2Settings,
+  workerR2Connected = false,
+  adminToken = null,
   onOpenR2Settings,
   onClose,
   onBatchComplete,
@@ -108,7 +113,8 @@ export const AdminBatchUploadModal: React.FC<AdminBatchUploadModalProps> = ({
 
   if (!open) return null;
 
-  const r2Ready = isR2Ready(r2Settings);
+  const useWorkerR2 = Boolean(workerR2Connected && adminToken);
+  const r2Ready = useWorkerR2 || isR2Ready(r2Settings);
   const selectedCatObj = categories.find((c) => c.id === category);
   const availableSubcats = selectedCatObj?.subcategories || [];
 
@@ -213,15 +219,26 @@ export const AdminBatchUploadModal: React.FC<AdminBatchUploadModalProps> = ({
           pdfSizeBytes: assets.pdfSizeBytes,
         });
 
-        const uploaded = await uploadAssetsToR2({
-          settings: r2Settings,
-          categorySlug: category,
-          slug: cleanSlug,
-          assets,
-          onStageChange: (stage) => {
-            updateItemState(item.localId, { stage });
-          },
-        });
+        const uploaded =
+          useWorkerR2 && adminToken
+            ? await uploadAssetsViaWorkerR2({
+                token: adminToken,
+                categorySlug: category,
+                slug: cleanSlug,
+                assets,
+                onStageChange: (stage) => {
+                  updateItemState(item.localId, { stage });
+                },
+              })
+            : await uploadAssetsToR2({
+                settings: r2Settings,
+                categorySlug: category,
+                slug: cleanSlug,
+                assets,
+                onStageChange: (stage) => {
+                  updateItemState(item.localId, { stage });
+                },
+              });
 
         updateItemState(item.localId, {
           stage: 'done',

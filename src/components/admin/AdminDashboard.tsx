@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   LayoutGrid,
   FolderTree,
@@ -18,6 +18,10 @@ import {
   Paintbrush,
   Palette,
   Layers,
+  Database,
+  HardDrive,
+  Loader2,
+  Cloud,
 } from 'lucide-react';
 import {
   AdminCatalogSheet,
@@ -33,6 +37,12 @@ import {
   R2ConnectionSettings,
   loadR2Settings,
 } from '../../utils/r2-upload';
+import {
+  CloudStatus,
+  DEFAULT_CLOUD_STATUS,
+  fetchCloudStatus,
+  saveCatalogToCloudD1,
+} from '../../utils/cloudflare-admin';
 import {
   AdminPinGate,
   isAdminSessionUnlocked,
@@ -61,8 +71,35 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   onExitToStorefront,
   onPreviewSheet,
 }) => {
+  const [cloudStatus, setCloudStatus] = useState<CloudStatus>({
+    ...DEFAULT_CLOUD_STATUS,
+  });
+  const [statusLoaded, setStatusLoaded] = useState(false);
+  // Bearer token stays strictly in JS/React memory (never stored in localStorage/sessionStorage)
+  const [adminToken, setAdminToken] = useState<string | null>(null);
   const [unlocked, setUnlocked] = useState<boolean>(() => isAdminSessionUnlocked());
+  const [d1SyncState, setD1SyncState] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
+  const [d1SyncError, setD1SyncError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'pages' | 'structure'>('pages');
+
+  useEffect(() => {
+    let active = true;
+    fetchCloudStatus()
+      .then((next) => {
+        if (!active) return;
+        setCloudStatus(next);
+        if (next.d1Bound || next.r2Bound || next.pinConfigured) {
+          // Enforce server-verified in-memory Bearer token whenever Worker auth/bindings are active
+          setUnlocked(false);
+        }
+      })
+      .finally(() => {
+        if (active) setStatusLoaded(true);
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   // Table search & filters
   const [searchQuery, setSearchQuery] = useState('');
@@ -79,7 +116,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   const [confirmDeleteSlug, setConfirmDeleteSlug] = useState<string | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // Cloudflare R2 Storage Settings state (pure client-side browser uploads)
+  // Cloudflare R2 Storage Settings state (optional fallback when Worker R2 binding isn't attached)
   const [r2Settings, setR2Settings] = useState<R2ConnectionSettings>(() =>
     loadR2Settings()
   );
@@ -94,8 +131,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   };
 
   const hasUnsaved = useMemo(
-    () => hasUnsavedCatalogChanges(catalogDoc),
-    [catalogDoc]
+    () => !cloudStatus.d1Bound && hasUnsavedCatalogChanges(catalogDoc),
+    [catalogDoc, cloudStatus.d1Bound]
   );
 
   const existingSlugs = useMemo(
@@ -124,10 +161,44 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     });
   }, [catalogDoc.sheets, searchQuery, filterCategory, filterDifficulty, filterFlag]);
 
+  const persistCatalogUpdate = (next: StaticCatalogDocument) => {
+    onUpdateCatalog(next);
+    if (cloudStatus.d1Bound && adminToken) {
+      setD1SyncState('saving');
+      setD1SyncError(null);
+      void saveCatalogToCloudD1(next, adminToken).then((res) => {
+        if (res.ok) {
+          setD1SyncState('saved');
+          setD1SyncError(null);
+        } else if (res.unauthorized) {
+          setAdminToken(null);
+          setUnlocked(false);
+        } else {
+          setD1SyncState('error');
+          setD1SyncError(res.error);
+        }
+      });
+    }
+  };
+
+  if (!statusLoaded) {
+    return (
+      <div className="min-h-screen bg-[#FAF8F5] dark:bg-[#0B1320] flex items-center justify-center gap-2 text-sm font-bold text-[#64748B]">
+        <Loader2 className="w-4 h-4 animate-spin text-[#2A9D8F]" />
+        <span>Loading Admin Catalog Manager...</span>
+      </div>
+    );
+  }
+
   if (!unlocked) {
     return (
       <AdminPinGate
-        onUnlock={() => setUnlocked(true)}
+        initialStatus={cloudStatus}
+        onUnlock={({ token, status }) => {
+          setCloudStatus(status);
+          setAdminToken(token);
+          setUnlocked(true);
+        }}
         onExit={onExitToStorefront}
       />
     );
@@ -172,7 +243,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       ? catalogDoc.sheets.map((s) => (s.slug === editingSheet!.slug ? saved : s))
       : [saved, ...catalogDoc.sheets];
 
-    onUpdateCatalog({
+    persistCatalogUpdate({
       ...catalogDoc,
       updatedAt: new Date().toISOString(),
       defaultR2BaseUrl: meta.updatedR2BaseUrl || catalogDoc.defaultR2BaseUrl,
@@ -182,14 +253,22 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
     setSheetModalOpen(false);
     setEditingSheet(null);
-    showToast(isEdit ? `Updated "${saved.title}"` : `Added "${saved.title}" to catalog`);
+    showToast(
+      cloudStatus.d1Bound
+        ? isEdit
+          ? `Published updates to "${saved.title}" in Cloudflare D1`
+          : `Published "${saved.title}" live to Cloudflare D1`
+        : isEdit
+        ? `Updated "${saved.title}"`
+        : `Added "${saved.title}" to catalog`
+    );
   };
 
   const handleToggleSheetFlag = (slug: string, flag: 'isTrending' | 'isHot') => {
     const nextSheets = catalogDoc.sheets.map((s) =>
       s.slug === slug ? { ...s, [flag]: !s[flag] } : s
     );
-    onUpdateCatalog({
+    persistCatalogUpdate({
       ...catalogDoc,
       updatedAt: new Date().toISOString(),
       sheets: nextSheets,
@@ -198,13 +277,19 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
   const handleDeleteSheet = (slug: string) => {
     const target = catalogDoc.sheets.find((s) => s.slug === slug);
-    onUpdateCatalog({
+    persistCatalogUpdate({
       ...catalogDoc,
       updatedAt: new Date().toISOString(),
       sheets: catalogDoc.sheets.filter((s) => s.slug !== slug),
     });
     setConfirmDeleteSlug(null);
-    if (target) showToast(`Deleted "${target.title}"`);
+    if (target) {
+      showToast(
+        cloudStatus.d1Bound
+          ? `Deleted "${target.title}" from Cloudflare D1`
+          : `Deleted "${target.title}"`
+      );
+    }
   };
 
   const handleBulkImport = (
@@ -239,20 +324,24 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     const untouched = catalogDoc.sheets.filter((s) => !importedSlugs.has(s.slug));
     const merged = [...imported, ...untouched];
 
-    onUpdateCatalog({
+    persistCatalogUpdate({
       ...catalogDoc,
       updatedAt: new Date().toISOString(),
       categories: nextCategories,
       sheets: merged,
     });
-    showToast(`Imported ${imported.length} coloring pages into local catalog`);
+    showToast(
+      cloudStatus.d1Bound
+        ? `Imported & published ${imported.length} coloring pages to Cloudflare D1`
+        : `Imported ${imported.length} coloring pages into local catalog`
+    );
   };
 
   const handleBatchUploadComplete = (uploadedSheets: AdminCatalogSheet[]) => {
     if (uploadedSheets.length === 0) return;
     const uploadedSlugs = new Set(uploadedSheets.map((s) => s.slug));
     const untouched = catalogDoc.sheets.filter((s) => !uploadedSlugs.has(s.slug));
-    onUpdateCatalog({
+    persistCatalogUpdate({
       ...catalogDoc,
       updatedAt: new Date().toISOString(),
       defaultR2BaseUrl: r2Settings.publicBaseUrl || catalogDoc.defaultR2BaseUrl,
@@ -261,7 +350,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     showToast(
       `Uploaded ${uploadedSheets.length} coloring page${
         uploadedSheets.length === 1 ? '' : 's'
-      } to Cloudflare R2 and added to catalog`
+      } to Cloudflare R2${cloudStatus.d1Bound ? ' and published live to D1' : ' and added to catalog'}`
     );
   };
 
@@ -275,7 +364,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   const handleSaveR2Settings = (next: R2ConnectionSettings) => {
     setR2Settings(next);
     if (next.publicBaseUrl && next.publicBaseUrl !== catalogDoc.defaultR2BaseUrl) {
-      onUpdateCatalog({
+      persistCatalogUpdate({
         ...catalogDoc,
         updatedAt: new Date().toISOString(),
         defaultR2BaseUrl: next.publicBaseUrl,
@@ -286,17 +375,18 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
   const handleExport = () => {
     downloadCatalogJson(catalogDoc);
-    showToast('Downloaded catalog.json — commit to src/data/catalog.json for Cloudflare Pages');
+    showToast('Downloaded catalog.json backup');
   };
 
   const handleConfirmReset = () => {
     onResetToLive();
     setConfirmReset(false);
-    showToast('Discarded local drafts and restored live catalog.json');
+    showToast('Discarded local drafts and restored catalog.json');
   };
 
   const handleLock = () => {
     lockAdminSession();
+    setAdminToken(null);
     setUnlocked(false);
   };
 
@@ -322,11 +412,32 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             Admin Catalog Manager
           </span>
 
-          {hasUnsaved && (
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#D97706]/25 border border-[#FFB703]/50 text-[#FFDEA9] text-xs font-extrabold whitespace-nowrap shrink-0">
-              <AlertCircle className="w-3.5 h-3.5 text-[#FFB703]" />
-              <span>Unsaved Changes</span>
+          {cloudStatus.d1Bound ? (
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#2A9D8F]/20 border border-[#2A9D8F]/45 text-[#99F6E4] text-xs font-extrabold whitespace-nowrap shrink-0">
+              {d1SyncState === 'saving' ? (
+                <>
+                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                  <span>Syncing D1...</span>
+                </>
+              ) : d1SyncState === 'error' ? (
+                <>
+                  <AlertCircle className="w-3.5 h-3.5 text-[#FCA5A5]" />
+                  <span>D1 Sync Error</span>
+                </>
+              ) : (
+                <>
+                  <Database className="w-3.5 h-3.5" />
+                  <span>Cloudflare D1 Live</span>
+                </>
+              )}
             </span>
+          ) : (
+            hasUnsaved && (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#D97706]/25 border border-[#FFB703]/50 text-[#FFDEA9] text-xs font-extrabold whitespace-nowrap shrink-0">
+                <AlertCircle className="w-3.5 h-3.5 text-[#FFB703]" />
+                <span>Unsaved Changes</span>
+              </span>
+            )
           )}
         </div>
 
@@ -434,18 +545,36 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             </span>
           </button>
 
-          {/* Local-First Workflow Guide Note (Desktop Sidebar Bottom) */}
+          {/* Workflow Guide Note (Desktop Sidebar Bottom) */}
           <div className="hidden lg:block mt-auto pt-4 border-t border-[#E2E8F0] dark:border-slate-800 space-y-2 text-xs text-[#64748B] dark:text-slate-400">
             <div className="font-extrabold text-[#0F1E36] dark:text-slate-200">
-              Static Deploy Workflow
+              {cloudStatus.d1Bound || cloudStatus.r2Bound
+                ? 'Cloudflare Edge Connected'
+                : 'Static Deploy Workflow'}
             </div>
-            <p className="leading-relaxed">
-              1. Add, edit, or bulk-import sheets here (saved in localStorage).
-            </p>
-            <p className="leading-relaxed">
-              2. Click <strong>Export catalog.json</strong> and replace{' '}
-              <span className="font-mono">src/data/catalog.json</span> in GitHub to deploy to Cloudflare Pages.
-            </p>
+            {cloudStatus.d1Bound || cloudStatus.r2Bound ? (
+              <>
+                <p className="leading-relaxed">
+                  • <strong>D1 Database:</strong>{' '}
+                  {cloudStatus.d1Bound ? 'Auto-publishes every edit live.' : 'Not bound yet.'}
+                </p>
+                <p className="leading-relaxed">
+                  • <strong>R2 Storage:</strong>{' '}
+                  {cloudStatus.r2Bound
+                    ? 'Uploads WebP & PDF directly via Worker (/cdn/*).'
+                    : 'Using browser R2 settings.'}
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="leading-relaxed">
+                  1. Add, edit, or bulk-import sheets here (saved in localStorage).
+                </p>
+                <p className="leading-relaxed">
+                  2. Click <strong>Export catalog.json</strong> or bind Cloudflare D1 &amp; R2 to publish live automatically.
+                </p>
+              </>
+            )}
           </div>
         </aside>
 
@@ -488,15 +617,72 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             </div>
           </div>
 
+          {d1SyncError && (
+            <div
+              role="alert"
+              className="rounded-xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-900 px-4 py-3 flex items-center justify-between gap-3 text-xs font-semibold text-red-700 dark:text-red-300"
+            >
+              <span className="flex items-center gap-2">
+                <AlertCircle className="w-4 h-4 shrink-0" />
+                <span>D1 Sync Error: {d1SyncError}</span>
+              </span>
+              <button
+                type="button"
+                onClick={() => persistCatalogUpdate(catalogDoc)}
+                className="px-3 py-1 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold cursor-pointer whitespace-nowrap"
+              >
+                Retry Sync
+              </button>
+            </div>
+          )}
+
+          {/* Bound Cloudflare Worker R2 & D1 Live Banner */}
+          {cloudStatus.r2Bound ? (
+            <div className="rounded-2xl bg-white dark:bg-[#111C2D] border border-[#2A9D8F]/40 px-4 sm:px-5 py-3.5 flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-3 min-w-0">
+                <span className="w-9 h-9 rounded-xl bg-[#2A9D8F]/15 text-[#2A9D8F] flex items-center justify-center shrink-0">
+                  <Cloud className="w-5 h-5" />
+                </span>
+                <div className="min-w-0">
+                  <div className="text-sm font-extrabold text-[#0F1E36] dark:text-white flex flex-wrap items-center gap-x-3 gap-y-1">
+                    <span>Cloudflare Worker R2 &amp; D1 Active</span>
+                    <span className="text-xs font-semibold text-[#2A9D8F] inline-flex items-center gap-1">
+                      <HardDrive className="w-3.5 h-3.5" />
+                      COLORING_BUCKET bound
+                    </span>
+                    {cloudStatus.d1Bound && (
+                      <span className="text-xs font-semibold text-[#2A9D8F] inline-flex items-center gap-1">
+                        <Database className="w-3.5 h-3.5" />
+                        DB live
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-xs text-[#64748B] dark:text-slate-400">
+                    Drag-and-drop uploads save directly to your bound R2 bucket at <span className="font-mono">/cdn/...</span> — no browser API keys or CORS configuration needed.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setR2PanelExpanded((v) => !v)}
+                className="text-xs font-bold text-[#64748B] hover:text-[#0F1E36] dark:hover:text-white cursor-pointer whitespace-nowrap"
+              >
+                {r2PanelExpanded ? 'Hide Custom R2 Keys' : 'Custom R2 Keys'}
+              </button>
+            </div>
+          ) : null}
+
           {/* Collapsible Cloudflare R2 Storage Settings Panel */}
-          <div ref={r2PanelRef}>
-            <AdminR2SettingsPanel
-              settings={r2Settings}
-              expanded={r2PanelExpanded}
-              onToggleExpanded={() => setR2PanelExpanded((v) => !v)}
-              onSaveSettings={handleSaveR2Settings}
-            />
-          </div>
+          {(!cloudStatus.r2Bound || r2PanelExpanded) && (
+            <div ref={r2PanelRef}>
+              <AdminR2SettingsPanel
+                settings={r2Settings}
+                expanded={r2PanelExpanded}
+                onToggleExpanded={() => setR2PanelExpanded((v) => !v)}
+                onSaveSettings={handleSaveR2Settings}
+              />
+            </div>
+          )}
 
           {activeTab === 'pages' ? (
             <section className="rounded-2xl bg-white dark:bg-[#111C2D] border border-[#E2E8F0] dark:border-slate-800 overflow-hidden">
@@ -782,14 +968,14 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               holidayTicker={catalogDoc.holidayTicker}
               sheetCountsByCategory={sheetCountsByCategory}
               onUpdateCategories={(next) =>
-                onUpdateCatalog({
+                persistCatalogUpdate({
                   ...catalogDoc,
                   updatedAt: new Date().toISOString(),
                   categories: next,
                 })
               }
               onUpdateHolidays={(next) =>
-                onUpdateCatalog({
+                persistCatalogUpdate({
                   ...catalogDoc,
                   updatedAt: new Date().toISOString(),
                   holidayTicker: next,
@@ -808,6 +994,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
         defaultR2BaseUrl={r2Settings.publicBaseUrl || catalogDoc.defaultR2BaseUrl}
         existingSlugs={existingSlugs}
         r2Settings={r2Settings}
+        workerR2Connected={cloudStatus.r2Bound}
+        adminToken={adminToken}
         onOpenR2Settings={handleOpenR2Settings}
         onSwitchToBatch={() => {
           setSheetModalOpen(false);
@@ -826,6 +1014,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
         categories={catalogDoc.categories}
         existingSlugs={existingSlugs}
         r2Settings={r2Settings}
+        workerR2Connected={cloudStatus.r2Bound}
+        adminToken={adminToken}
         onOpenR2Settings={handleOpenR2Settings}
         onClose={() => setBatchUploadModalOpen(false)}
         onBatchComplete={handleBatchUploadComplete}

@@ -31,6 +31,7 @@ import {
   isR2Ready,
   uploadAssetsToR2,
 } from '../../utils/r2-upload';
+import { uploadAssetsViaWorkerR2 } from '../../utils/cloudflare-admin';
 
 interface AdminSheetModalProps {
   open: boolean;
@@ -39,6 +40,8 @@ interface AdminSheetModalProps {
   defaultR2BaseUrl: string;
   existingSlugs: Set<string>;
   r2Settings: R2ConnectionSettings;
+  workerR2Connected?: boolean;
+  adminToken?: string | null;
   onOpenR2Settings: () => void;
   onSwitchToBatch: () => void;
   onClose: () => void;
@@ -68,6 +71,8 @@ export const AdminSheetModal: React.FC<AdminSheetModalProps> = ({
   defaultR2BaseUrl,
   existingSlugs,
   r2Settings,
+  workerR2Connected = false,
+  adminToken = null,
   onOpenR2Settings,
   onSwitchToBatch,
   onClose,
@@ -183,7 +188,8 @@ export const AdminSheetModal: React.FC<AdminSheetModalProps> = ({
 
   if (!open) return null;
 
-  const r2Ready = isR2Ready(r2Settings);
+  const useWorkerR2 = Boolean(workerR2Connected && adminToken);
+  const r2Ready = useWorkerR2 || isR2Ready(r2Settings);
   const selectedCategoryObj = categories.find((c) => c.id === category);
   const availableSubcategories = selectedCategoryObj?.subcategories || [];
   const activeCategorySlug = creatingCategory
@@ -292,18 +298,27 @@ export const AdminSheetModal: React.FC<AdminSheetModalProps> = ({
         setConvertedAssets(assetsToUpload);
       }
 
-      const uploaded = await uploadAssetsToR2({
-        settings: r2Settings,
-        categorySlug: activeCategorySlug,
-        slug: cleanSlug,
-        assets: assetsToUpload,
-        onStageChange: (stage) => setUploadStage(stage),
-      });
+      const uploaded =
+        useWorkerR2 && adminToken
+          ? await uploadAssetsViaWorkerR2({
+              token: adminToken,
+              categorySlug: activeCategorySlug,
+              slug: cleanSlug,
+              assets: assetsToUpload,
+              onStageChange: (stage) => setUploadStage(stage),
+            })
+          : await uploadAssetsToR2({
+              settings: r2Settings,
+              categorySlug: activeCategorySlug,
+              slug: cleanSlug,
+              assets: assetsToUpload,
+              onStageChange: (stage) => setUploadStage(stage),
+            });
 
       setPreviewWebpUrl(uploaded.previewWebpUrl);
       setPdfUrl(uploaded.pdfUrl);
       setPdfLetterUrl(uploaded.pdfLetterUrl);
-      if (r2Settings.publicBaseUrl) {
+      if (!useWorkerR2 && r2Settings.publicBaseUrl) {
         setR2Base(r2Settings.publicBaseUrl);
       }
       setUploadStage('done');

@@ -32,8 +32,15 @@ export const SheetCard: React.FC<SheetCardProps> = ({
   const fallbackArtUri = getLineArtDataUri(sheet.id);
   const [pdfThumb, setPdfThumb] = useState<string | null>(null);
 
+  const hasDedicatedImageThumb = Boolean(
+    sheet.thumbnailUrl &&
+      !sheet.thumbnailUrl.startsWith('/cdn/thumbs/') &&
+      !sheet.thumbnailUrl.toLowerCase().endsWith('.pdf')
+  );
+  const needsPdfThumb = Boolean(sheet.sourcePdfUrl && !hasDedicatedImageThumb);
+
   useEffect(() => {
-    if (!sheet.sourcePdfUrl) {
+    if (!needsPdfThumb || !sheet.sourcePdfUrl) {
       setPdfThumb(null);
       return;
     }
@@ -48,9 +55,9 @@ export const SheetCard: React.FC<SheetCardProps> = ({
     return () => {
       cancelled = true;
     };
-  }, [sheet.sourcePdfUrl]);
+  }, [needsPdfThumb, sheet.sourcePdfUrl]);
 
-  const previewSrc = sheet.sourcePdfUrl ? pdfThumb || '' : sheet.thumbnailUrl;
+  const previewSrc = needsPdfThumb ? pdfThumb || '' : sheet.thumbnailUrl;
 
   const difficultyLabel =
     sheet.difficulty === 'easy'

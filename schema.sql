@@ -1,5 +1,19 @@
 -- Cloudflare D1 Schema for ColorWorld
--- Run with: npx wrangler d1 execute colorworld-db --file=./schema.sql
+-- Tables are also auto-created on first Worker request, or you can apply manually:
+-- npx wrangler d1 execute colorworld-db --remote --file=./schema.sql
+
+CREATE TABLE IF NOT EXISTS catalog_state (
+  id TEXT PRIMARY KEY,
+  payload TEXT NOT NULL,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS admin_auth (
+  id TEXT PRIMARY KEY,
+  pin_hash TEXT NOT NULL,
+  pin_salt TEXT NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 
 CREATE TABLE IF NOT EXISTS sheet_metrics (
   id TEXT PRIMARY KEY,

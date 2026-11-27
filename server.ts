@@ -20,6 +20,7 @@ async function startServer() {
   app.post('/api/r2-test', express.json({ limit: '64kb' }), handleR2Test);
   app.get('/api/r2-status', handleR2Status);
 
+  app.use('/api/admin', express.json({ limit: '25mb' }));
   app.use(express.json());
 
   /**
@@ -33,15 +34,23 @@ async function startServer() {
       const fullUrl = new URL(req.originalUrl, origin).toString();
 
       const hasBody = req.method !== 'GET' && req.method !== 'HEAD';
+      const headers: Record<string, string> = {
+        'content-type': req.headers['content-type'] || 'application/json',
+      };
+      if (typeof req.headers.authorization === 'string') {
+        headers.authorization = req.headers.authorization;
+      }
+
       const webReq = new Request(fullUrl, {
         method: req.method,
-        headers: {
-          'content-type': req.headers['content-type'] || 'application/json',
-        },
+        headers,
         body: hasBody && req.body ? JSON.stringify(req.body) : undefined,
       });
 
-      const webRes = await handleEdgeRequest(webReq, {});
+      const webRes = await handleEdgeRequest(webReq, {
+        ADMIN_PIN: process.env.ADMIN_PIN,
+        ADMIN_SESSION_SECRET: process.env.ADMIN_SESSION_SECRET,
+      });
 
       res.status(webRes.status);
       webRes.headers.forEach((value, key) => {

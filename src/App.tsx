@@ -40,6 +40,7 @@ import {
   slugify,
 } from './data/catalog-store';
 import { getCategorySeoContent } from './data/category-seo';
+import { fetchLiveCatalogFromD1 } from './utils/cloudflare-admin';
 import { useSeo } from './hooks/useSeo';
 import { Header } from './components/Header';
 import { HolidayStrip } from './components/HolidayStrip';
@@ -337,6 +338,21 @@ export default function App() {
     () => buildStorefrontCatalog(catalogDoc, locale),
     [catalogDoc, locale]
   );
+
+  // Hydrate live catalog from Cloudflare D1 when bound on production Workers
+  useEffect(() => {
+    let active = true;
+    void fetchLiveCatalogFromD1().then((result) => {
+      if (!active || !result) return;
+      if (result.source === 'cloudflare-d1') {
+        setCatalogDoc(result.catalog);
+        saveCatalogDocument(result.catalog);
+      }
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   // Sync live catalog changes across browser tabs if admin edits in another tab
   useEffect(() => {
