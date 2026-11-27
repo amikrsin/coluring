@@ -1,33 +1,26 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "colorworld"
-compatibility_date = "2026-11-01"
+compatibility_date = "2025-01-01"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = "dist"
 
-# Optional standalone Worker entry (when deploying workers/api.ts directly)
-# main = "workers/api.ts"
+# Optional bindings — uncomment ONLY after creating these resources in Cloudflare Dashboard.
+# ColorWorld runs 100% live on Cloudflare Pages without requiring R2, KV, or D1 bindings:
+# - Static catalog is served from src/data/catalog.json
+# - Browser-direct R2 uploads in /admin use your R2 API keys configured in Admin Settings
+# - Pages Functions (/cdn/* and /api/*) automatically fall back cleanly when unbound
 
-[vars]
-PUBLIC_ORIGIN = "https://colorworld.pages.dev"
+# [[r2_buckets]]
+# binding = "COLORING_BUCKET"
+# bucket_name = "colorworld-assets"
+# preview_bucket_name = "colorworld-assets-preview"
 
-# Cloudflare R2 Bucket storing:
-# - thumbs/{sheetId}.webp
-# - lineart/{sheetId}.png
-# - pdfs/a4/{sheetId}.pdf
-# - pdfs/letter/{sheetId}.pdf
-[[r2_buckets]]
-binding = "COLORING_BUCKET"
-bucket_name = "colorworld-assets"
-preview_bucket_name = "colorworld-assets-preview"
+# [[kv_namespaces]]
+# binding = "COLORING_KV"
+# id = "YOUR_KV_NAMESPACE_ID"
+# preview_id = "YOUR_PREVIEW_KV_ID"
 
-# Cloudflare KV for ultra-fast edge caching of catalog & counters
-[[kv_namespaces]]
-binding = "COLORING_KV"
-id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
-preview_id = "REPLACE_WITH_YOUR_PREVIEW_KV_ID"
-
-# Cloudflare D1 SQLite database for persistent views, votes, and trending scores
-[[d1_databases]]
-binding = "DB"
-database_name = "colorworld-db"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "colorworld-db"
+# database_id = "YOUR_D1_DATABASE_ID"

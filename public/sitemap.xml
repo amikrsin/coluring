@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://colorworld.pages.dev/en/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/" />
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://colorworld.pages.dev/en/top</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/top" />
@@ -33,7 +33,7 @@
   </url>
   <url>
     <loc>https://colorworld.pages.dev/en/trending</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/trending" />
@@ -47,258 +47,588 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/trending" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/holidays</loc>
-    <lastmod>2026-11-25</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://colorworld.pages.dev/en/category/holidays</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/holidays" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/holidays" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/holidays" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/holidays" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/holidays" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/holidays" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/holidays" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/holidays" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/holidays" />
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/en/category/worksheets</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/worksheets" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/worksheets" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/worksheets" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/worksheets" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/worksheets" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/worksheets" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/worksheets" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/worksheets" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/worksheets" />
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/en/category/fantasy</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/fantasy" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/fantasy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/fantasy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/fantasy" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/fantasy" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/fantasy" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/fantasy" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/fantasy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/fantasy" />
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/en/category/mandalas</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/mandalas" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/mandalas" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/mandalas" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/mandalas" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/mandalas" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/mandalas" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/mandalas" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/mandalas" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/mandalas" />
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/en/category/dinosaurs</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/dinosaurs" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/dinosaurs" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/dinosaurs" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/dinosaurs" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/dinosaurs" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/dinosaurs" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/dinosaurs" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/dinosaurs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/dinosaurs" />
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/en/category/animals</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/animals" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/animals" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/animals" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/animals" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/animals" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/animals" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/animals" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/animals" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/animals" />
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/en/category/calendars</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/calendars" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/calendars" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/calendars" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/calendars" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/calendars" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/calendars" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/calendars" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/calendars" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/calendars" />
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/en/category/space</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/space" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/space" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/space" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/space" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/space" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/space" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/space" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/space" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/space" />
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/en/category/vehicles</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/vehicles" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/vehicles" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/vehicles" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/vehicles" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/vehicles" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/vehicles" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/vehicles" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/vehicles" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/vehicles" />
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/en/category/teachers</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/teachers" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/teachers" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/teachers" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/teachers" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/teachers" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/teachers" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/teachers" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/teachers" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/teachers" />
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/en/category/holidays/thanksgiving</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/holidays" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/holidays" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/holidays" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/holidays" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/holidays" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/holidays" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/holidays" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/holidays" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/holidays" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/holidays/thanksgiving" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/holidays/thanksgiving" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/holidays/thanksgiving" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/holidays/thanksgiving" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/holidays/thanksgiving" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/holidays/thanksgiving" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/holidays/thanksgiving" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/holidays/thanksgiving" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/holidays/thanksgiving" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/worksheets</loc>
-    <lastmod>2026-11-25</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://colorworld.pages.dev/en/category/worksheets/line-tracing</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/worksheets" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/worksheets" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/worksheets" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/worksheets" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/worksheets" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/worksheets" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/worksheets" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/worksheets" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/worksheets" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/worksheets/line-tracing" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/worksheets/line-tracing" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/worksheets/line-tracing" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/worksheets/line-tracing" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/worksheets/line-tracing" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/worksheets/line-tracing" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/worksheets/line-tracing" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/worksheets/line-tracing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/worksheets/line-tracing" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/calendars</loc>
-    <lastmod>2026-11-25</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://colorworld.pages.dev/en/category/holidays/christmas</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/calendars" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/calendars" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/calendars" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/calendars" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/calendars" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/calendars" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/calendars" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/calendars" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/calendars" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/holidays/christmas" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/holidays/christmas" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/holidays/christmas" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/holidays/christmas" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/holidays/christmas" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/holidays/christmas" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/holidays/christmas" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/holidays/christmas" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/holidays/christmas" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/teachers</loc>
-    <lastmod>2026-11-25</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://colorworld.pages.dev/en/category/fantasy/unicorns</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/teachers" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/teachers" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/teachers" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/teachers" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/teachers" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/teachers" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/teachers" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/teachers" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/teachers" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/fantasy/unicorns" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/fantasy/unicorns" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/fantasy/unicorns" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/fantasy/unicorns" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/fantasy/unicorns" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/fantasy/unicorns" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/fantasy/unicorns" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/fantasy/unicorns" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/fantasy/unicorns" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/coloring-pages/thanksgiving-harvest</loc>
-    <lastmod>2026-11-25</lastmod>
+    <loc>https://colorworld.pages.dev/en/category/mandalas/botanical</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/coloring-pages/thanksgiving-harvest" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/coloring-pages/thanksgiving-harvest" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/coloring-pages/thanksgiving-harvest" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/coloring-pages/thanksgiving-harvest" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/coloring-pages/thanksgiving-harvest" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/coloring-pages/thanksgiving-harvest" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/coloring-pages/thanksgiving-harvest" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/coloring-pages/thanksgiving-harvest" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/coloring-pages/thanksgiving-harvest" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/mandalas/botanical" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/mandalas/botanical" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/mandalas/botanical" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/mandalas/botanical" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/mandalas/botanical" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/mandalas/botanical" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/mandalas/botanical" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/mandalas/botanical" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/mandalas/botanical" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/coloring-pages/christmas-wonderland</loc>
-    <lastmod>2026-11-25</lastmod>
+    <loc>https://colorworld.pages.dev/en/category/dinosaurs/t-rex</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/coloring-pages/christmas-wonderland" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/coloring-pages/christmas-wonderland" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/coloring-pages/christmas-wonderland" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/coloring-pages/christmas-wonderland" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/coloring-pages/christmas-wonderland" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/coloring-pages/christmas-wonderland" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/coloring-pages/christmas-wonderland" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/coloring-pages/christmas-wonderland" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/coloring-pages/christmas-wonderland" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/dinosaurs/t-rex" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/dinosaurs/t-rex" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/dinosaurs/t-rex" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/dinosaurs/t-rex" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/dinosaurs/t-rex" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/dinosaurs/t-rex" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/dinosaurs/t-rex" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/dinosaurs/t-rex" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/dinosaurs/t-rex" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/coloring-pages/friendly-dinosaurs</loc>
-    <lastmod>2026-11-25</lastmod>
+    <loc>https://colorworld.pages.dev/en/category/animals/ocean</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/coloring-pages/friendly-dinosaurs" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/coloring-pages/friendly-dinosaurs" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/coloring-pages/friendly-dinosaurs" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/coloring-pages/friendly-dinosaurs" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/coloring-pages/friendly-dinosaurs" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/coloring-pages/friendly-dinosaurs" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/coloring-pages/friendly-dinosaurs" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/coloring-pages/friendly-dinosaurs" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/coloring-pages/friendly-dinosaurs" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/animals/ocean" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/animals/ocean" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/animals/ocean" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/animals/ocean" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/animals/ocean" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/animals/ocean" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/animals/ocean" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/animals/ocean" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/animals/ocean" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/coloring-pages/magical-unicorns</loc>
-    <lastmod>2026-11-25</lastmod>
+    <loc>https://colorworld.pages.dev/en/category/calendars/monthly-planners</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/coloring-pages/magical-unicorns" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/coloring-pages/magical-unicorns" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/coloring-pages/magical-unicorns" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/coloring-pages/magical-unicorns" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/coloring-pages/magical-unicorns" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/coloring-pages/magical-unicorns" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/coloring-pages/magical-unicorns" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/coloring-pages/magical-unicorns" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/coloring-pages/magical-unicorns" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/calendars/monthly-planners" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/calendars/monthly-planners" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/calendars/monthly-planners" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/calendars/monthly-planners" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/calendars/monthly-planners" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/calendars/monthly-planners" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/calendars/monthly-planners" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/calendars/monthly-planners" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/calendars/monthly-planners" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/coloring-pages/outer-space-explorers</loc>
-    <lastmod>2026-11-25</lastmod>
+    <loc>https://colorworld.pages.dev/en/category/space/rockets</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/coloring-pages/outer-space-explorers" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/coloring-pages/outer-space-explorers" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/coloring-pages/outer-space-explorers" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/coloring-pages/outer-space-explorers" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/coloring-pages/outer-space-explorers" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/coloring-pages/outer-space-explorers" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/coloring-pages/outer-space-explorers" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/coloring-pages/outer-space-explorers" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/coloring-pages/outer-space-explorers" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/space/rockets" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/space/rockets" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/space/rockets" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/space/rockets" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/space/rockets" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/space/rockets" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/space/rockets" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/space/rockets" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/space/rockets" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/coloring-pages/speed-machines</loc>
-    <lastmod>2026-11-25</lastmod>
+    <loc>https://colorworld.pages.dev/en/category/vehicles/race-cars</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/coloring-pages/speed-machines" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/coloring-pages/speed-machines" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/coloring-pages/speed-machines" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/coloring-pages/speed-machines" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/coloring-pages/speed-machines" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/coloring-pages/speed-machines" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/coloring-pages/speed-machines" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/coloring-pages/speed-machines" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/coloring-pages/speed-machines" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/vehicles/race-cars" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/vehicles/race-cars" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/vehicles/race-cars" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/vehicles/race-cars" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/vehicles/race-cars" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/vehicles/race-cars" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/vehicles/race-cars" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/vehicles/race-cars" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/vehicles/race-cars" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/coloring-pages/ocean-friends</loc>
-    <lastmod>2026-11-25</lastmod>
+    <loc>https://colorworld.pages.dev/en/category/dinosaurs/herbivores</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/coloring-pages/ocean-friends" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/coloring-pages/ocean-friends" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/coloring-pages/ocean-friends" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/coloring-pages/ocean-friends" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/coloring-pages/ocean-friends" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/coloring-pages/ocean-friends" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/coloring-pages/ocean-friends" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/coloring-pages/ocean-friends" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/coloring-pages/ocean-friends" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/dinosaurs/herbivores" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/dinosaurs/herbivores" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/dinosaurs/herbivores" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/dinosaurs/herbivores" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/dinosaurs/herbivores" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/dinosaurs/herbivores" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/dinosaurs/herbivores" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/dinosaurs/herbivores" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/dinosaurs/herbivores" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/coloring-pages/mindful-mandalas</loc>
-    <lastmod>2026-11-25</lastmod>
+    <loc>https://colorworld.pages.dev/en/category/worksheets/alphabet</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/coloring-pages/mindful-mandalas" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/coloring-pages/mindful-mandalas" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/coloring-pages/mindful-mandalas" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/coloring-pages/mindful-mandalas" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/coloring-pages/mindful-mandalas" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/coloring-pages/mindful-mandalas" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/coloring-pages/mindful-mandalas" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/coloring-pages/mindful-mandalas" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/coloring-pages/mindful-mandalas" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/worksheets/alphabet" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/worksheets/alphabet" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/worksheets/alphabet" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/worksheets/alphabet" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/worksheets/alphabet" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/worksheets/alphabet" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/worksheets/alphabet" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/worksheets/alphabet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/worksheets/alphabet" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/coloring-pages/preschool-worksheets</loc>
-    <lastmod>2026-11-25</lastmod>
+    <loc>https://colorworld.pages.dev/en/category/fantasy/magic-gardens</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/coloring-pages/preschool-worksheets" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/coloring-pages/preschool-worksheets" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/coloring-pages/preschool-worksheets" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/coloring-pages/preschool-worksheets" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/coloring-pages/preschool-worksheets" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/coloring-pages/preschool-worksheets" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/coloring-pages/preschool-worksheets" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/coloring-pages/preschool-worksheets" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/coloring-pages/preschool-worksheets" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/fantasy/magic-gardens" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/fantasy/magic-gardens" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/fantasy/magic-gardens" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/fantasy/magic-gardens" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/fantasy/magic-gardens" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/fantasy/magic-gardens" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/fantasy/magic-gardens" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/fantasy/magic-gardens" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/fantasy/magic-gardens" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/coloring-pages/printable-calendars</loc>
-    <lastmod>2026-11-25</lastmod>
+    <loc>https://colorworld.pages.dev/en/category/animals/cats-pets</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/coloring-pages/printable-calendars" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/coloring-pages/printable-calendars" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/coloring-pages/printable-calendars" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/coloring-pages/printable-calendars" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/coloring-pages/printable-calendars" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/coloring-pages/printable-calendars" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/coloring-pages/printable-calendars" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/coloring-pages/printable-calendars" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/coloring-pages/printable-calendars" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/animals/cats-pets" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/animals/cats-pets" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/animals/cats-pets" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/animals/cats-pets" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/animals/cats-pets" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/animals/cats-pets" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/animals/cats-pets" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/animals/cats-pets" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/animals/cats-pets" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/coloring-pages/teacher-classroom-pack</loc>
-    <lastmod>2026-11-25</lastmod>
+    <loc>https://colorworld.pages.dev/en/category/teachers/classroom-awards</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/coloring-pages/teacher-classroom-pack" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/coloring-pages/teacher-classroom-pack" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/coloring-pages/teacher-classroom-pack" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/coloring-pages/teacher-classroom-pack" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/coloring-pages/teacher-classroom-pack" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/coloring-pages/teacher-classroom-pack" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/coloring-pages/teacher-classroom-pack" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/coloring-pages/teacher-classroom-pack" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/coloring-pages/teacher-classroom-pack" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/teachers/classroom-awards" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/teachers/classroom-awards" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/teachers/classroom-awards" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/teachers/classroom-awards" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/teachers/classroom-awards" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/teachers/classroom-awards" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/teachers/classroom-awards" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/teachers/classroom-awards" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/teachers/classroom-awards" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/coloring-pages/spring-easter-fun</loc>
-    <lastmod>2026-11-25</lastmod>
+    <loc>https://colorworld.pages.dev/en/category/space/astronauts</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/coloring-pages/spring-easter-fun" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/coloring-pages/spring-easter-fun" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/coloring-pages/spring-easter-fun" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/coloring-pages/spring-easter-fun" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/coloring-pages/spring-easter-fun" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/coloring-pages/spring-easter-fun" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/coloring-pages/spring-easter-fun" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/coloring-pages/spring-easter-fun" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/coloring-pages/spring-easter-fun" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/space/astronauts" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/space/astronauts" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/space/astronauts" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/space/astronauts" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/space/astronauts" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/space/astronauts" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/space/astronauts" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/space/astronauts" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/space/astronauts" />
   </url>
   <url>
-    <loc>https://colorworld.pages.dev/en/coloring-pages/spooky-halloween</loc>
-    <lastmod>2026-11-25</lastmod>
+    <loc>https://colorworld.pages.dev/en/category/vehicles/rescue-trucks</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/coloring-pages/spooky-halloween" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/coloring-pages/spooky-halloween" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/coloring-pages/spooky-halloween" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/coloring-pages/spooky-halloween" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/coloring-pages/spooky-halloween" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/coloring-pages/spooky-halloween" />
-    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/coloring-pages/spooky-halloween" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/coloring-pages/spooky-halloween" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/coloring-pages/spooky-halloween" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/vehicles/rescue-trucks" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/vehicles/rescue-trucks" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/vehicles/rescue-trucks" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/vehicles/rescue-trucks" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/vehicles/rescue-trucks" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/vehicles/rescue-trucks" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/vehicles/rescue-trucks" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/vehicles/rescue-trucks" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/vehicles/rescue-trucks" />
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/en/category/holidays/easter</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/holidays/easter" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/holidays/easter" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/holidays/easter" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/holidays/easter" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/holidays/easter" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/holidays/easter" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/holidays/easter" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/holidays/easter" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/holidays/easter" />
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/en/category/holidays/halloween</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colorworld.pages.dev/en/category/holidays/halloween" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://colorworld.pages.dev/es/category/holidays/halloween" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://colorworld.pages.dev/fr/category/holidays/halloween" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://colorworld.pages.dev/de/category/holidays/halloween" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://colorworld.pages.dev/pt/category/holidays/halloween" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://colorworld.pages.dev/it/category/holidays/halloween" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://colorworld.pages.dev/nl/category/holidays/halloween" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://colorworld.pages.dev/pl/category/holidays/halloween" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://colorworld.pages.dev/en/category/holidays/halloween" />
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/thanksgiving-turkey</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/worksheet-matching-trace</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/holiday-santa</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/holiday-snowman</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/unicorn-castle</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/mandala-botanical</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/dino-trex</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/ocean-whale</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/calendar-monthly</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/space-rocket</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/vehicle-racecar</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/dino-stego</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/worksheet-alphabet</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/unicorn-garden</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/animal-cat-yarn</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/teacher-classroom</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/space-astronaut</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/vehicle-firetruck</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/holiday-easter-bunny</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/page/holiday-halloween-pumpkin</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/about</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/contact</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/privacy-policy</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/terms-of-use</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://colorworld.pages.dev/dmca</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 </urlset>
