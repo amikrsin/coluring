@@ -37,7 +37,12 @@ export interface D1DatabaseLike {
   prepare(query: string): D1PreparedStatementLike;
 }
 
+export interface AssetsFetcherLike {
+  fetch(request: Request): Promise<Response>;
+}
+
 export interface CloudflareEnv {
+  ASSETS?: AssetsFetcherLike;
   COLORING_BUCKET?: R2BucketLike;
   COLORING_KV?: KVNamespaceLike;
   DB?: D1DatabaseLike;
@@ -399,6 +404,10 @@ export async function handleEdgeRequest(request: Request, env: CloudflareEnv = {
       upvotes: (baseSheet?.upvotes ?? basePack?.upvotes ?? 0) + delta.upvotesDelta,
       downvotes: (baseSheet?.downvotes ?? basePack?.downvotes ?? 0) + delta.downvotesDelta,
     });
+  }
+
+  if (env.ASSETS) {
+    return env.ASSETS.fetch(request);
   }
 
   return jsonResponse({ error: 'Not found' }, 404);

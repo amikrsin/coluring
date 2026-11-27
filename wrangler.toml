@@ -1,14 +1,23 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "colorworld"
+main = "workers/api.ts"
 compatibility_date = "2025-01-01"
 compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = "dist"
+
+[build]
+command = "npm run build"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*", "/cdn/*"]
 
 # Optional bindings — uncomment ONLY after creating these resources in Cloudflare Dashboard.
-# ColorWorld runs 100% live on Cloudflare Pages without requiring R2, KV, or D1 bindings:
+# ColorWorld runs 100% live on Cloudflare Workers without requiring R2, KV, or D1 bindings:
 # - Static catalog is served from src/data/catalog.json
 # - Browser-direct R2 uploads in /admin use your R2 API keys configured in Admin Settings
-# - Pages Functions (/cdn/* and /api/*) automatically fall back cleanly when unbound
+# - /cdn/* and /api/* automatically fall back cleanly when unbound
 
 # [[r2_buckets]]
 # binding = "COLORING_BUCKET"
