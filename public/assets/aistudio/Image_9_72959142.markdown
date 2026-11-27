@@ -1,0 +1,232 @@
+---
+name: Playful Craft & Print
+colors:
+  surface: '#f9f9ff'
+  surface-dim: '#cfdaf2'
+  surface-bright: '#f9f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f0f3ff'
+  surface-container: '#e7eeff'
+  surface-container-high: '#dee8ff'
+  surface-container-highest: '#d8e3fb'
+  on-surface: '#111c2d'
+  on-surface-variant: '#5b403f'
+  inverse-surface: '#263143'
+  inverse-on-surface: '#ecf1ff'
+  outline: '#8f6f6e'
+  outline-variant: '#e4bebc'
+  surface-tint: '#bb152c'
+  primary: '#b7102a'
+  on-primary: '#ffffff'
+  primary-container: '#db313f'
+  on-primary-container: '#fffbff'
+  inverse-primary: '#ffb3b1'
+  secondary: '#006a60'
+  on-secondary: '#ffffff'
+  secondary-container: '#8cf5e4'
+  on-secondary-container: '#007166'
+  tertiary: '#7a5500'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#996c00'
+  on-tertiary-container: '#fffbff'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#ffdad8'
+  primary-fixed-dim: '#ffb3b1'
+  on-primary-fixed: '#410007'
+  on-primary-fixed-variant: '#92001c'
+  secondary-fixed: '#8cf5e4'
+  secondary-fixed-dim: '#6fd8c8'
+  on-secondary-fixed: '#00201c'
+  on-secondary-fixed-variant: '#005048'
+  tertiary-fixed: '#ffdea9'
+  tertiary-fixed-dim: '#ffba27'
+  on-tertiary-fixed: '#271900'
+  on-tertiary-fixed-variant: '#5e4100'
+  background: '#f9f9ff'
+  on-background: '#111c2d'
+  surface-variant: '#d8e3fb'
+typography:
+  display-hero:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 2.25rem
+    fontWeight: '800'
+    lineHeight: 2.75rem
+    letterSpacing: -0.02em
+  display-hero-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 1.75rem
+    fontWeight: '800'
+    lineHeight: 2.25rem
+    letterSpacing: -0.01em
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 1.5rem
+    fontWeight: '700'
+    lineHeight: 2rem
+    letterSpacing: -0.015em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 1.25rem
+    fontWeight: '700'
+    lineHeight: 1.75rem
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 1rem
+    fontWeight: '700'
+    lineHeight: 1.5rem
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 1rem
+    fontWeight: '500'
+    lineHeight: 1.5rem
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 0.875rem
+    fontWeight: '400'
+    lineHeight: 1.375rem
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 0.75rem
+    fontWeight: '400'
+    lineHeight: 1.125rem
+  label-pill:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 0.8125rem
+    fontWeight: '700'
+    lineHeight: 1rem
+  label-badge:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 0.6875rem
+    fontWeight: '800'
+    lineHeight: 0.875rem
+    letterSpacing: 0.02em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-desktop: 1.25rem
+  margin: 1rem
+  margin-desktop: 2rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 0.75rem
+  space-lg: 1rem
+  space-xl: 1.5rem
+  space-2xl: 2rem
+  space-3xl: 3rem
+---
+
+## Brand & Style
+
+This design system delivers a joyous, parent-approved, and kid-delighting digital repository for printable activities and coloring media. Rooted in tactile desktop publishing and playful web discovery, the personality bridges unconstrained childhood creativity with the utmost functional clarity for busy parents, educators, and young crafters.
+
+The aesthetic philosophy draws heavily from **Modern High-Contrast Tactile Minimalism** fused with warm paper craft tropes:
+- **Paper-First Realism:** Clean printable cards simulate physical sheets of crisp coloring paper, anchored by delicate dashed cut lines (`#CBD5E1`), bright numeric badges, and stark black-and-white ink sketches.
+- **Deep Anchored Chrome:** Heavy utility chrome bathed in midnight navy (`#0F1E36`) offers clear contrast, framing cheerful high-saturation pills, category chips, and candy-colored holiday tags.
+- **Encouraging Tactility:** Generous rounded click-targets, soft button states, buoyant iconography, and bright red conversion triggers evoke the physical joy of art supplies, sticker sheets, and freshly printed worksheets.
+
+## Colors
+
+The palette balances utility and playful exuberance through a calibrated, warm light system punctuated by high-contrast anchors:
+
+- **Canvas & Paper Foundations:**
+  - Base Page Background: `#FAF8F5` (warm, natural craft paper tone that prevents optical glare).
+  - Surface Card Pure: `#FFFFFF` (elevates printable assets with clean, bright white canvas clarity).
+  - Subtle Framing & Rulers: `#E2E8F0` for solid containment borders, accompanied by `#CBD5E1` for playful dashed cut lines and card boundaries.
+
+- **Primary Action (Coral Punch):**
+  - `#E63946` acts as the vital conversion engine. Reserved for global search triggers, major CTA buttons ("Download Full Pack"), active holiday pills, floating print tray counters, and red circular add buttons.
+
+- **Secondary Accents (Nature & Play):**
+  - **Sky Teal (`#2A9D8F`):** Applied to active filter pills, verification tags ("36 Free Pages"), and quick-action subheaders.
+  - **Sunny Gold (`#FFB703`):** Applied to playful badges, high-priority ranks (#1, #2), star filters, and seasonal countdown indicators.
+  - **Spring Green (`#38B000`):** Used for trending upward markers, badge highlights, and completion states.
+
+- **Header / Utility Chrome:**
+  - Deep Navy (`#0F1E36`) grounds the upper chrome bar, mega-dropdown containers, and global search fields, providing high legibility against white text and colorful icons.
+
+- **Typography & Neutrals:**
+  - Primary Text: `#1E293B` (rich charcoal slate ensuring high-contrast readability without harsh pure black).
+  - Supporting Muted: `#64748B` (for metadata, page counts, subheadings, and secondary breadcrumbs).
+
+## Typography
+
+Typography is clean, rounded, geometric, and immediately legible across generations. Using **Plus Jakarta Sans** uniformly across all tiers ensures consistent, soft letterforms without sacrificing the crisp geometric rhythm needed in data-dense mega menus and printable metadata grids.
+
+- **Display & Headings:** Rendered at Extra Bold (800) and Bold (700). High optical weight creates an inviting storybook aura, accompanied by subtle negative letter-spacing for tight, punchy headings.
+- **Labels & Micro-Badges:** Uppercase and compact lowercase badges use Bold (700) or Extra Bold (800) to keep micro-tags ("HOT", "4 wks", "#1") sharply defined even at diminutive 11px scales.
+- **Body & Captions:** Medium (500) and Regular (400) maintain open counters and generous line heights to facilitate rapid scanning by parents and teachers on varied screen sizes.
+
+## Layout & Spacing
+
+The system leverages a structured fluid-responsive grid system designed to support both dense content catalogs (e.g., mega-navigation drawers with 4 columns of category links) and modular printable sheet card matrices.
+
+### Breakpoints & Adaptive Rhythm
+- **Mobile (<640px):** Single column layouts; header compresses secondary utilities into a bottom sticky bar or quick icon triggers; sheet cards display in a 2-column grid with `0.75rem` gap.
+- **Tablet (640px–1024px):** 3-column sheet grids with `1rem` gap; mega-menus shift to scrollable horizontally paginated category tabs.
+- **Desktop (>1024px):** Max container width `1280px` centered with fluid `margin-desktop: 2rem`; 4-column card layouts (`gutter-desktop: 1.25rem`) that allow optimal thumbnail visibility matching physical paper aspect ratios (4:3 and Letter/A4).
+
+### Spacing Discipline
+All component-internal padding and layouts use standard 4px multiples:
+- Micro-pill badges: `space-xs` (vertical) × `space-sm` (horizontal).
+- Standard pills and input containers: `space-sm` × `space-md`.
+- Printable sheets & category cards: `space-lg` inner padding around preview artwork.
+- Section vertical dividers: `space-2xl` to `space-3xl` between content themes.
+
+## Elevation & Depth
+
+To echo the experience of sorting through actual drawing pads and craft papers, elevation relies on clean surface layering, crisp tactile borders, and diffused paper drop shadows rather than heavy artificial blur.
+
+1. **Level 0 (Base Craft Mat):** `#FAF8F5` flat background.
+2. **Level 1 (Paper Cards & Containers):** `#FFFFFF` surfaces featuring a crisp outline (`1px solid #E2E8F0`) and an ambient, ultra-soft downward lift: `box-shadow: 0 2px 6px -1px rgba(15, 30, 54, 0.05), 0 1px 3px -1px rgba(15, 30, 54, 0.03)`.
+3. **Level 2 (Hovered Sheets & Floating Toolbars):** Scaled hover interaction (`translateY(-2px)`) with heightened shadow: `0 8px 16px -3px rgba(15, 30, 54, 0.08), 0 3px 6px -2px rgba(15, 30, 54, 0.04)`.
+4. **Level 3 (Mega Menus, Drawers & Modals):** Crisp dropdown containers layered over page content with distinct edge separation: `0 16px 32px -4px rgba(15, 30, 54, 0.14)`.
+5. **Dashed Cut-Out Depth:** Preview card image containers employ an inner inset `#F8FAFC` background wrapped with a `1.5px dashed #CBD5E1` border, creating the tactile illusion of an unperforated coloring page awaiting scissors or printing.
+
+## Shapes
+
+The geometric personality features approachable, softened curves that feel inviting to children while sustaining neat alignment in dense organizational menus:
+
+- **Base Cards & Drawers:** Governed by `roundedness: 2` (base `0.5rem` / `8px` up to `rounded-lg: 1rem` / `16px` on large content cards and modals).
+- **Navigation Chips, Filter Pills & Badges:** Full-pill silhouette (`border-radius: 9999px`) creates high tactile affordance and visual distinction against rectangular paper previews.
+- **Add-Action Floating Buttons:** Circular shapes (`border-radius: 50%`) with high-contrast coral fill (`#E63946`) nested in the upper-right corners of coloring sheets.
+
+## Components
+
+### 1. Navigation & Header Chrome
+- **Main Bar:** Background `#0F1E36` with a height of 64px. Houses the brand wordmark, quick stats, rounded search input, and high-contrast "Print Set" cart button.
+- **Search Bar:** Pill-shaped (`rounded-full`), white background with dark navy text, framed with an inset coral magnifying trigger icon button (`#E63946`).
+- **Category Navigation Pills:** Surface white or translucent pill buttons with subtle outlines, pairing an emoji/icon, label, and chevron arrow. When active, shifts to solid coral `#E63946` with white text.
+
+### 2. Printable Paper Preview Cards
+- **Card Shell:** Pure white `#FFFFFF` background, `rounded-xl` (16px), bordered with `1px solid #E2E8F0`.
+- **Rank Indicator:** Stamped in the top-left corner (`#1`, `#2`, etc.) with a bright crimson/coral badge (`#E63946` fill or outlined red pill with white text).
+- **Action Stamp:** Circular floating `+` button in top-right corner (`28px × 28px`, `#E63946` background, crisp white plus glyph) for instant addition to print queue.
+- **Artwork Frame:** Centered art preview held within a `1.5px dashed #CBD5E1` border with a subtle `#F8FAFC` backing, representing the printable bounds.
+- **Meta Block:** Centered Bold heading (`headline-sm`) followed by a light slate page count pill (`1 page`).
+
+### 3. Filter & Jump Chips
+- **Chips:** Height of 34px, rounded-full, with an icon + text arrangement.
+- **Default State:** White background with `#E2E8F0` border and `#1E293B` text.
+- **Active State:** Solid Sky Teal (`#2A9D8F`) or Coral (`#E63946`) with white text and bold weight.
+
+### 4. Countdown & Event Banners
+- **Strip Layout:** Horizontal overflow-x row of upcoming calendar events (Christmas, New Year, Easter).
+- **Badge Anatomy:** Pill border containing an emoji, a red/gold countdown indicator (`4 wks`, `5 wks`), and event title.
+
+### 5. Mega Dropdown Menus
+- **Drawer Panel:** Full-width pure white dropdown surface with soft elevation, segregated into categorical columns (e.g., Animals, Cars, Holidays).
+- **List Items:** Row elements with clear line-art icons, category titles, item count badges in soft gray pills, and optional crimson `HOT` tags.
+
+### 6. Frequently Asked Questions (Accordion)
+- **Container:** Rounded pure white cards with `#E2E8F0` hairline dividers.
+- **Header:** Bold question text with a bold, rounded `+` expansion toggle on the right edge.
+- **Active/Expanded:** Reveals smooth transition with medium slate body text.

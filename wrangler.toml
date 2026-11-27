@@ -1,0 +1,33 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "colorworld"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "dist"
+
+# Optional standalone Worker entry (when deploying workers/api.ts directly)
+# main = "workers/api.ts"
+
+[vars]
+PUBLIC_ORIGIN = "https://colorworld.pages.dev"
+
+# Cloudflare R2 Bucket storing:
+# - thumbs/{sheetId}.webp
+# - lineart/{sheetId}.png
+# - pdfs/a4/{sheetId}.pdf
+# - pdfs/letter/{sheetId}.pdf
+[[r2_buckets]]
+binding = "COLORING_BUCKET"
+bucket_name = "colorworld-assets"
+preview_bucket_name = "colorworld-assets-preview"
+
+# Cloudflare KV for ultra-fast edge caching of catalog & counters
+[[kv_namespaces]]
+binding = "COLORING_KV"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+preview_id = "REPLACE_WITH_YOUR_PREVIEW_KV_ID"
+
+# Cloudflare D1 SQLite database for persistent views, votes, and trending scores
+[[d1_databases]]
+binding = "DB"
+database_name = "colorworld-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"

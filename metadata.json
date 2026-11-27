@@ -1,0 +1,6 @@
+{
+  "name": "ColorWorld",
+  "description": "Free international printable coloring pages in A4 and US Letter PDFs with an interactive Color Online canvas studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

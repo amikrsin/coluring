@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+}
+
+.paper-card-shadow {
+  box-shadow: 0 2px 6px -1px rgba(15, 30, 54, 0.05), 0 1px 3px -1px rgba(15, 30, 54, 0.03);
+}
+
+.paper-card-shadow:hover {
+  box-shadow: 0 10px 20px -4px rgba(15, 30, 54, 0.1), 0 4px 8px -2px rgba(15, 30, 54, 0.04);
+}
+
+.dark .paper-card-shadow {
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.35);
+}
+
+.dark .paper-card-shadow:hover {
+  box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.5);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 9999px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.5);
+}
+
+@page {
+  margin: 0.35in;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .no-print,
+  header,
+  footer,
+  nav,
+  aside {
+    display: none !important;
+  }
+
+  .print-sheet-frame {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 95vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+  }
+
+  .print-sheet-image {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 94vh !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+  }
+}
