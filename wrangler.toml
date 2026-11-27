@@ -1,11 +1,8 @@
 #:schema node_modules/wrangler/config-schema.json
-name = "colorworld"
+name = "coluring"
 main = "workers/api.ts"
 compatibility_date = "2025-01-01"
 compatibility_flags = ["nodejs_compat"]
-
-[build]
-command = "npm run build"
 
 [assets]
 directory = "./dist"
