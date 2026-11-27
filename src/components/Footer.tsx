@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palette, Lock } from 'lucide-react';
+import { Palette } from 'lucide-react';
 import { Locale } from '../types';
 import { SUPPORTED_LOCALES, TranslationDictionary } from '../i18n/translations';
 
@@ -139,14 +139,6 @@ export const Footer: React.FC<FooterProps> = ({
               >
                 {t.footer.sitemap}
               </a>
-              <button
-                type="button"
-                onClick={() => onNavigate('/admin')}
-                className="inline-flex items-center gap-1 text-slate-400 hover:text-white transition-colors cursor-pointer"
-              >
-                <Lock className="w-3 h-3 text-[#2A9D8F]" />
-                <span>Admin</span>
-              </button>
             </div>
           </div>
         </div>
